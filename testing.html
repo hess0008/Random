@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+
+
+<style>
+.flex-container{
+    display:flex;
+}
+
+.flex-container > img {
+    width:100%
+}
+
+.icon-container{
+    padding-top:10px;
+    margin-right:20px;
+}
+
+
+/* tabs*/
+.flex-box {
+    display: flex;
+    flex: 1;
+  }
+  .img-box {
+    text-align: center;
+    width: 100%;
+  }
+  .selectors{
+    display: flex;
+    flex-direction: column;
+    color: #C6C6C6;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: bold;
+    padding: 10px 0 !important;
+    border-bottom: #ccc 1px solid;
+    cursor: pointer;
+  }
+  .selectors:hover {
+    color: #3D4F82;
+}
+  .select {
+    background: #fff;
+    color: #3D4F82 !important;
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: #3D4F82 5px solid !important;
+  }
+.images{
+    transform: translateY(50px);
+    opacity: 0;
+    animation: description 0.6s forwards ease-in;
+}
+  .tab-text-1{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    color: #3D4F82;
+    margin-top:25px !important;
+  }
+  .tab-text-2{
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 35px;
+    color: #444;
+  }
+  .tab-text-3{
+    font-weight: 500;
+    font-size: 20px;
+    color: #FF7F00;
+    text-align: right;
+    cursor: pointer;
+  }
+/* keyframes */
+@keyframes description {
+    to {
+        transform: translateY(0);
+        opacity: 1;}
+}
+
+
+</style>
+
+
+</head>
+
+<body>
+
+
+<div class="flex-container">
+    <div class="icon-container">
+        <img src="https://s3.amazonaws.com/gofreight-v2/wp-content/uploads/2021/05/14104145/arrows-pointing-to-center-1-1.png"/>
+    </div>
+    <div>
+        <h3>Centralize Your Operation</h3>
+        <p>Save cost on multiple software integrations by streamlining all your logistic operations in a single freight forwarding software.</p>
+    </div>
+
+
+</div>
+
+<div class="flex-box">
+    <div class="flex-box" style="display:block">
+    <a class="selectors tablink select" onclick="openFeature(event, 'Management', 'img1')">Management</a>
+    <div id="Management" class="feature" style="display:block">
+        <p class="tab-text-1">Make profitable decisions that propel your business forward</p>
+        <p class="tab-text-2">We reveal the insights you need to make real-time decisions at the right time. See what's happening today, and plan for tomorrow.</p>
+        <p class="tab-text-3">Learn more ></p>
+    </div>
+    
+    
+    <a class="selectors tablink" onclick="openFeature(event, 'Accounting', 'img2')">Accounting</a>
+    <div id="Accounting" class="feature" style="display:none">
+        <p class="tab-text-1">Reduce Costly Bookkeeping Mistakes & Inefficiencies</p> 
+        <p class="tab-text-2">GoFreight's shipment-based accounting system will help you automate workflow, prevent human errors, and provide comprehensive reports so your team can focus on your core business.</p>
+        <p class="tab-text-3">Learn more ></p>
+    </div>
+    
+    
+    <a class="selectors tablink" onclick="openFeature(event, 'Operation', 'img3')">Operation</a>
+    <div id="Operation" class="feature" style="display:none">
+        <p class="tab-text-1">Eradicate inefficient and time-consuming paper based workflow</p>
+        <p class="tab-text-2">Store and access all your files in one centralized cloud storage for each corresponding shipment or business partners.</p>
+        <p class="tab-text-3">Learn more ></p>
+    </div>
+    </div>
+    <div class="flex-box">
+        <div id="img1" class="images img-box" style="display:block">
+            <img src="https://business.gofreight.co/wp-content/uploads/2021/06/management.png">
+        </div>
+        
+        
+        <div id="img2" class="images img-box" style="display:none">
+            <img src="https://business.gofreight.co/wp-content/uploads/2021/06/management.png">
+        </div>
+        
+        
+        <div id="img3" class="images img-box" style="display:none">
+            <img src="https://business.gofreight.co/wp-content/uploads/2021/06/management.png">
+        </div>
+    </div>
+</div>
+<script>
+function openFeature(evt, featureName, img) {
+  var i, x, y, tablinks;
+  x = document.getElementsByClassName("feature");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  y = document.getElementsByClassName("images");
+  for (i = 0; i < y.length; i++) {
+    y[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("selectors");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" select", ""); 
+  }
+  document.getElementById(featureName).style.display = "block";
+  document.getElementById(img).style.display = "block";
+  evt.currentTarget.className += " select";
+}
+</script>
+
+
+</body>
+
+
+<script src="test.js"></script>
+</html>

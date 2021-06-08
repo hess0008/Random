@@ -1,0 +1,30 @@
+.flex-box{
+    display:flex;
+    align-items:center;
+}
+
+.accordion{
+    color:#C6C6C6;
+    font-size:20px;
+    padding:0 0 10px 0;
+    border:none;
+    border-bottom:5px solid #C6C6C6;
+    display:block;
+    width:100%;
+    background-color:#fff;
+    text-align:left;
+}
+
+
+
+.accordion:hover,.activated{
+    color:#3D4F82;
+    border-bottom:5px solid #3D4F82;
+}
+
+
+.accordion-box{
+    max-height:0;
+    overflow:hidden;
+    margin-bottom:20px;
+}

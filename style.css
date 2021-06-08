@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body{
+    max-width:1000px;
+    margin:auto;
+    font-family:'Raleway',san-serif;
+    box-shadow:2px 2px 20px #000;
+}
+
+h1{
+    font-size:36px;
+}
+
+li{
+    text-align:left;
+}
+
+li + li{
+    margin-top:5px;
+}
+
+
+.white{
+    color:#fff;
+}
+
+.header{
+    padding:30px;
+    background-color:#09C0D6;
+}
+
+.flex-container{
+    display:flex;
+}
+
+.center-align{
+    align-items:center;
+}
+
+
+.profile-picture{
+    width:150px;
+    border-radius:100px;
+    margin-left:50px;
+    margin:auto;
+}
+
+.left-container{
+    width:300px;
+}
+
+.right-container{
+    width:700px;
+
+}
+
+.header .left-container{
+    padding-left:30px;
+    padding-right:10px;
+    padding-top:20px;
+}
+
+.header .right-container{
+    padding-left:50px;
+    padding-top:30px;
+    padding-bottom:30px;
+}
+
+.container-body{
+    padding-left:20px;
+    padding-right:20px;
+    padding-top:10px;
+    padding-bottom:10px;
+    line-height:1.5em;
+}
+
+
+.body .left-container{
+    background-color:#000;
+    text-align:center;
+    color:#fff;
+    padding-top:40px;
+}
+
+
+.body .left-container ul{
+    list-style-type:none;
+    padding-left:20px;
+}
+
+.body .left-container li:before{
+    content:"✩";
+    margin-right:10px;
+
+}
+
+}
+
+.body .right-container{
+    background-color:#fff;
+}
+
+.separator{
+    border-top:2px solid #fff;
+    border-bottom:2px solid #fff;
+    padding-top:20px;
+    padding-bottom:20px;
+    width:100%;
+    font-size:24px;
+    font-weight:700;
+    margin-bottom:0;
+}
+
+.fancy-separator{
+    text-align:center;
+    line-height: 0.5;
+    font-size:28px;
+}
+
+.fancy-separator span{
+    display:inline-block;
+    position:relative;
+}
+
+.fancy-separator span:before,
+.fancy-separator span:after{
+    position:absolute;
+    top:6px;
+    content:"";
+    border-bottom: 1px solid #000;
+    border-top: 1px solid #000;
+    height:5px;
+    width:200px;
+}
+
+.fancy-separator span:before{
+    right:100%;
+    margin-right:15px;
+}
+.fancy-separator span:after{
+    left:100%;
+    margin-left:15px;
+}
